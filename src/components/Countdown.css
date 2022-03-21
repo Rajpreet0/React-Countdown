@@ -1,9 +1,29 @@
+
+/*
+* Saying that in default (*) all Files will have a padding of 0 
+* And that there will be fixed height and width -> not dynamic 
+*/
+
 *{
     padding: 0;
     box-sizing: border-box;
 }
 
+/*
+ Calling the countdown_main Class
+*/
+
 .countdown_main {
+    /*
+     ----- Set the Background Image ----- 
+       >  Using a linear-gradient as filter for the background picture
+       >  The Picture we will be using is in the url 
+       
+       >  background properties:
+           - size:     cover     [the whole image will be coverd]
+           - position: center    [the image will be centered]
+           - repeat:   no-repeat [there only will be one image which covers the whole screen]
+    */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/background.jpg);
     background-size: cover;
     background-position: center;
@@ -11,7 +31,17 @@
     
 }
 
+/*
+  All h1 tags in the class container will be focused  
+*/
+
 .container h1 {
+    /*
+      font-size:      The Size of the Text (Font) in px Unit
+      color:          The Color of the Text
+      letter-spacing: The Space between letters in px Unit
+      margin-bottom:  The Space from the bottom component 
+    */
     font-size: 55px;
     color: white;
     letter-spacing: 3.5px;
@@ -19,6 +49,12 @@
 }
 
 .container {
+    /*
+      display:flex;             ->  Everything will be next to each other 
+      flex-direction: column;   ->  Everything will be in a order
+      align-items: center;      ->  Items will be centered 
+      min-heigt:  The minimum height of the Component in vh [viewHeights] Unit 
+    */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +63,9 @@
 }
 
 .countdown {
+    /*
+     justify-content: space-around -> All Elements will have a evenly space between the Elements
+    */
     display: flex;
     align-items: center;
     text-align: center;
@@ -34,10 +73,18 @@
 }
 
 .countdown article {
+    /*
+     margin: space in all directions in px Unit
+    */
     margin: 30px;
 }
 
 .countdown p {
+    /*
+     background-color: Color of the Background in hexadecimal 
+     border-radius:    rounds the corner of an element in px Unit
+     box-shadow:       Adds a shadow effect to an Element [x-Value, y-Value, blur-radius, color]
+    */
     padding: 20px;
     background-color: #fff;
     font-weight: bold;
